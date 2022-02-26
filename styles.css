@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'SanFranciscoDisplay-Regular';
+    src: url(SanFranciscoDisplay-Regular.otf);
+ }
+
+ html, *, *::before, *::after  {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'SanFranciscoDisplay-Regular';
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button, a, i {
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+nav{
+    border: 0.6px solid #eee;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav .hambergur{
+    padding: 16px 0;
+    margin-left: 10px;
+}
+
+nav i{
+    margin: 0 1rem;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+nav span {
+    transform:translateY(-1px);
+}
+
+.left {
+    width: 300px;
+    border-right: 0.6px solid #eee;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.menu {
+    padding: 20px 15px 20px 30px;
+    color: #212529;
+    height: 100%;
+}
+
+li.report {
+    padding: 20px 15px 23px 0px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.report i {
+    position: absolute;
+    right: 30px;
+    font-size: 8px;
+    margin-top: 5px;
+    transition: transform .2s ease;
+}
+
+.detail {
+    color: #808080;
+    font-size: 15px;
+}
+
+.detail-item {
+    padding: 17px 0 15px 10px;
+    margin-left: 15px;
+    position: relative;
+    --color: #eeeeee;
+}
+
+.detail-item:hover{
+    background-color: #d8ecf4;
+}
+
+.detail-item::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    left: 0;
+    background: var(--color);
+}
+
+.onChoose {
+    font-weight: 600;
+}
