@@ -86,10 +86,12 @@ li.report {
     justify-content: space-between;
 
 }
-
+.report span{
+    position: relative;
+}
 .report i {
     position: absolute;
-    right: 30px;
+    left: 230px;
     font-size: 8px;
     margin-top: 5px;
     transition: transform .2s ease;
