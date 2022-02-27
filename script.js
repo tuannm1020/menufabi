@@ -17,7 +17,7 @@ reports.forEach((report, ind) => {
         }
         details[ind].classList.toggle('hide')
         if (!details[ind].classList.contains('hide')) {
-            arrowIcons[ind].style.transform = 'rotate(90deg)'
+            arrowIcons[ind].style.cssText = `transform: rotate(90deg); color: #000;`
             const detailItems = [...details[ind].querySelectorAll('li.detail-item')]
             detailItems.forEach(detailItem => {
                 detailItem.addEventListener('click', () => {
@@ -27,11 +27,12 @@ reports.forEach((report, ind) => {
                 `
                     detailItem.style.cssText = `
                     font-weight: 600;
-                    --color: #878787; 
+                    color: #0560a6;
+                    --color: #0560a6; 
                     `
                     tempDetailItem = detailItem
                 })
             })
-        } else arrowIcons[ind].style.transform = 'rotate(0)'
+        } else arrowIcons[ind].style.cssText = `transform: rotate(0); color: #a5a5a5;`
     })
 })

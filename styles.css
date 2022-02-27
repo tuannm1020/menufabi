@@ -12,6 +12,10 @@ body{
     font-size: 18px;
 }
 
+*::-webkit-scrollbar {
+    display: none;
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -67,31 +71,29 @@ nav span {
 }
 
 .left {
-    width: 300px;
+    width: 325px;
     border-right: 0.6px solid #eee;
     overflow-y: auto;
     height: 100%;
 }
 
 .menu {
-    padding: 20px 15px 20px 30px;
+    padding: 20px 15px 20px 18px;
     color: #212529;
     height: 100%;
 }
 
 li.report {
-    padding: 20px 15px 23px 0px;
+    padding: 20px 15px 13px 0px;
     font-size: 1rem;
     display: flex;
     justify-content: space-between;
-
-}
-.report span{
     position: relative;
 }
 .report i {
+    color: #a5a5a5;
     position: absolute;
-    left: 230px;
+    right: 0;
     font-size: 8px;
     margin-top: 5px;
     transition: transform .2s ease;
@@ -100,11 +102,24 @@ li.report {
 .detail {
     color: #808080;
     font-size: 15px;
+    position: relative;
+}
+
+.detail::before {
+    content: '';
+    width: 2px;
+    background-color: #eeeeee;
+    position: absolute;
+    left: 33px;
+    top: 7px;
+    height: 95%;
+    border-radius: 5px;
+    z-index: -1;
 }
 
 .detail-item {
-    padding: 17px 0 15px 10px;
-    margin-left: 15px;
+    padding: 10px 0 10px 10px;
+    margin-left: 34px;
     position: relative;
     --color: #eeeeee;
 }
@@ -117,8 +132,10 @@ li.report {
     content: '';
     position: absolute;
     width: 2px;
-    height: 20px;
-    left: 0;
+    height: 73%;
+    top: 7px;
+    border-radius: 5px;
+    left: -1px;
     background: var(--color);
 }
 
